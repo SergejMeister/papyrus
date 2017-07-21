@@ -1,24 +1,17 @@
-import {NgModule} from '@angular/core';
-import {BrowserModule} from '@angular/platform-browser';
+import { NgModule }      from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule }   from '@angular/forms'; // <-- NgModel lives here
 
-import {AppComponent} from './app.component';
-import {routing, appRoutingProviders} from './app.routing';
-import {HomeComponent} from './home/home.component';
-import {AboutComponent} from './about/about.component';
+import { AppComponent }  from './app.component';
 
 @NgModule({
-    declarations: [
-        AppComponent,
-        HomeComponent,
-        AboutComponent
-    ],
-    imports: [
-        BrowserModule,
-        routing
-    ],
-    providers: [appRoutingProviders],
-    bootstrap: [AppComponent]
+  imports: [
+    BrowserModule,
+    FormsModule // <-- import the FormsModule before binding with [(ngModel)]
+  ],
+  declarations: [
+    AppComponent
+  ],
+  bootstrap: [ AppComponent ]
 })
-
-export class AppModule {
-}
+export class AppModule { }
