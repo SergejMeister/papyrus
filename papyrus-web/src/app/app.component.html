@@ -1,16 +1,61 @@
-<header class="mui-appbar mui--z1">
-  <!-- Appbar HTML goes here -->
-  <naviagtion-menu></naviagtion-menu>
-</header>
-<div id="content-wrapper" class="mui-container-fluid">
-  <!-- Content HTML goes here -->
-  <router-outlet></router-outlet>
+<div fxLayout="column" fxFlex [class.dark-theme]="isDarkTheme">
+
+  <md-toolbar color="primary">
+    <span style="font-weight: bold; font-size: larger;">Papyrus</span>
+
+    <!-- Filler that pushes the menu button to the end of the toolbar -->
+    <span fxFlex></span>
+
+    <button md-button>Registration</button>
+    <button md-button>Login</button>
+  </md-toolbar>
+
+  <md-sidenav-container fxFlex>
+    <md-sidenav mode="side" opened>
+      <md-nav-list>
+        <md-list-item>
+          <button md-menu-item class="nav-button">
+            <md-icon>dashboard</md-icon>
+            <span>Dashboard</span>
+          </button>
+        </md-list-item>
+        <md-list-item>
+          <button md-menu-item class="nav-button">
+            <md-icon>collections_bookmark</md-icon>
+            <span>Contracts</span>
+          </button>
+        </md-list-item>
+        <md-list-item>
+          <button md-menu-item class="nav-button">
+            <md-icon>receipt</md-icon>
+            <span>Documents</span>
+          </button>
+        </md-list-item>
+      </md-nav-list>
+
+    </md-sidenav>
+    <div class="content" fxLayout="row" fxLayout.sm="column" fxLayoutGap="16px">
+
+      <md-card fxFlex="80">
+        <md-icon svgIcon="avatars:{{selectedUser.avatar}}" class="avatar"></md-icon>
+        <h2>{{selectedUser.name}}</h2>
+        <p>{{selectedUser.details}}</p>
+      </md-card>
+
+      <md-card fxFlex fxLayout="column" fxLayoutGap="14px">
+        <md-slide-toggle [(ngModel)]="selectedUser.isAdmin">Is Admin?</md-slide-toggle>
+        <md-slide-toggle [(ngModel)]="selectedUser.isCool">Is Cool?</md-slide-toggle>
+      </md-card>
+
+    </div>
+  </md-sidenav-container>
+
+  <md-menu #themeMenu x-position="before">
+    <button md-menu-item (click)="isDarkTheme = !isDarkTheme">Toggle Theme</button>
+  </md-menu>
+
+  <button md-fab (click)="openAdminDialog()" class="fab-bottom-right">
+    <md-icon>add</md-icon>
+  </button>
+
 </div>
-<footer>
-  <div class="mui-container mui--text-center">
-    <i class="material-icons">Copyright</i> 2017 Sergej Meister
-  </div>
-</footer>
-
-
-

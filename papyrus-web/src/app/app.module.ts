@@ -1,26 +1,37 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { HttpModule }    from '@angular/http';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {FormsModule} from '@angular/forms';
+import {HttpModule} from '@angular/http';
 
 import { AppRoutingModule } from './app-routing.module';
 
-import { AppComponent } from './app.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MaterialModule} from '@angular/material';
+import {FlexLayoutModule} from '@angular/flex-layout';
+
+import {AppComponent} from './app.component';
+import {DialogComponent} from './dialog/dialog.component';
 import { Dashboard }   from './dashboard/dashboard.component';
-import { NavigationMenu }   from './navigation-menu/navigation-menu.component';
-import { StateService } from './services/state.service';
+
+import 'hammerjs';
 
 @NgModule({
   imports: [
     BrowserModule,
+    FormsModule,
     HttpModule,
+    MaterialModule,
+    FlexLayoutModule,
+    BrowserAnimationsModule,
     AppRoutingModule
   ],
   declarations: [
     AppComponent,
-    Dashboard,
-    NavigationMenu
+    DialogComponent,
+    Dashboard
   ],
-  providers: [StateService],
+  providers: [],
+  entryComponents: [DialogComponent,Dashboard],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
