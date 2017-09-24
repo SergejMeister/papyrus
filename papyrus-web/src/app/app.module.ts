@@ -10,8 +10,10 @@ import {MaterialModule} from '@angular/material';
 import {FlexLayoutModule} from '@angular/flex-layout';
 
 import {AppComponent} from './app.component';
-import {DialogComponent} from './dialog/dialog.component';
 import { Dashboard }   from './dashboard/dashboard.component';
+import { DocumentsView }    from './documents-view/documents-view.component';
+import { DocumentView }    from './document-view/document-view.component';
+import { ContractsView }    from './contracts-view/contracts-view.component';
 
 import 'hammerjs';
 
@@ -27,11 +29,12 @@ import 'hammerjs';
   ],
   declarations: [
     AppComponent,
-    DialogComponent,
-    Dashboard
+    Dashboard,
+    DocumentsView,
+    DocumentView,
+    ContractsView
   ],
   providers: [],
-  entryComponents: [DialogComponent,Dashboard],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
