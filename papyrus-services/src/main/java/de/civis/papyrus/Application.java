@@ -1,21 +1,18 @@
 package de.civis.papyrus;
 
+
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.stereotype.Controller;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
  * Start application.
  *
  * @author Sergej Meister
  */
-@Controller
-@EnableAutoConfiguration
-@ComponentScan
+@SpringBootApplication
 public class Application {
 
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
     }
 }
