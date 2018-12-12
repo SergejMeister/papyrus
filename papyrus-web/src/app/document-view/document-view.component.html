@@ -1,24 +1,27 @@
+
 <h2>Create document</h2>
-<form class="example-form">
-  <table class="example-full-width" cellspacing="0">
+<form class="app-form">
+  <table class="app-form-full-width" cellspacing="0">
     <tr>
       <td>
-        <md-form-field class="example-full-width">
+        <md-form-field class="app-form-full-width">
           <input mdInput required placeholder="Title">
         </md-form-field>
       </td>
     </tr>
     <tr>
       <td>
-        <md-form-field class="example-full-width">
+        <md-form-field class="app-form-full-width">
           <textarea mdInput placeholder="Description"></textarea>
         </md-form-field>
       </td>
     </tr>
     <tr>
-      <md-form-field class="example-full-width">
-        <input id="docInput" required mdInput placeholder="Upload Document">
-      </md-form-field>
+      <td>
+        <div class="app-form-full-width">
+          <input-file mdInput placeholder="Select document" [valuePlaceholder]="valuePlaceholder" required="true"></input-file>
+        </div>
+      </td>
     </tr>
   </table>
 </form>

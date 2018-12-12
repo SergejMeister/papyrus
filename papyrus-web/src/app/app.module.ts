@@ -9,11 +9,13 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MaterialModule} from '@angular/material';
 import {FlexLayoutModule} from '@angular/flex-layout';
 
+
 import {AppComponent} from './app.component';
 import { Dashboard }   from './dashboard/dashboard.component';
 import { DocumentsView }    from './documents-view/documents-view.component';
 import { DocumentView }    from './document-view/document-view.component';
 import { ContractsView }    from './contracts-view/contracts-view.component';
+import { InputFile }    from './input-file/input-file.component';
 
 import 'hammerjs';
 
@@ -32,7 +34,8 @@ import 'hammerjs';
     Dashboard,
     DocumentsView,
     DocumentView,
-    ContractsView
+    ContractsView,
+    InputFile
   ],
   providers: [],
   bootstrap: [AppComponent]

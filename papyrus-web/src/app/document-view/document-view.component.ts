@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router }    from '@angular/router';
+import { InputFile }    from './../input-file/input-file.component';
 
 
 @Component({
@@ -9,5 +10,4 @@ import { Router }    from '@angular/router';
 })
 
 export class DocumentView {
-
 }
