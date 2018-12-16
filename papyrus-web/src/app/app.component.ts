@@ -1,8 +1,4 @@
-import {Component} from '@angular/core';
-import {MdIconRegistry, MdDialog} from '@angular/material';
-import {DomSanitizer} from '@angular/platform-browser';
-
-import 'rxjs/add/operator/filter';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -10,4 +6,5 @@ import 'rxjs/add/operator/filter';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  title = 'papyrus-web';
 }
