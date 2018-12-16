@@ -1,4 +1,4 @@
-export class Contract {
+export class Document {
   name: string;
   description: string;
 }
